@@ -1,16 +1,19 @@
 # Título do Projeto
 
+# TextOS
+
+
 `CURSO`
 
 `DISCIPLINA`
 
 `SEMESTRE`
 
-[Descrever resumidamente, em um ou dois parágrafos, o projeto desenvolvido.]
+O projeto consiste em uma aplicação web para gerenciar ordens de serviço de uma pequena empresa têxtil. A solução centraliza demandas, responsáveis, prazos, status e histórico das atividades.
 
 ## Integrantes
 
-* Nome completo do aluno 1
+* Luiz Guilherme
 * Nome completo do aluno 2
 * Nome completo do aluno 3
 * Nome completo do aluno 4
@@ -35,7 +38,7 @@
 
 # Hospedagem
 
-* Insira o endereço eletrônico público de acesso ao conteúdo publicado. 
+* [TextOS](https://textoswebapp.netlify.app/)
 
 # Código-Fonte
 
