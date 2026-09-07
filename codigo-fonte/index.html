@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gestão de Ordens de Serviço</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- LOGIN -->
+<section id="login" class="login-page">
+  <div class="login-hero">
+    <div class="logo big">OS</div>
+    <h1>Organize suas ordens de serviço em um só lugar.</h1>
+    <p>Protótipo acadêmico para uma pequena empresa do ramo têxtil, com foco no acompanhamento de demandas, responsáveis, prazos e histórico.</p>
+    <ul>
+      <li>Painel geral com resumo das ordens</li>
+      <li>Cadastro, consulta e edição visual</li>
+      <li>Histórico e acompanhamento de status</li>
+    </ul>
+  </div>
+
+  <div class="login-side">
+    <div class="login-card">
+      <h2>Acessar sistema</h2>
+      <p>Entre com suas credenciais para continuar.</p>
+
+      <div class="field">
+        <label>E-mail</label>
+        <input type="email" value="gestor@empresa.com">
+      </div>
+
+      <div class="field">
+        <label>Senha</label>
+        <input type="password" value="123456">
+      </div>
+
+      <a class="btn full" href="#dashboard">Entrar</a>
+      <small>Protótipo visual sem JavaScript.</small>
+    </div>
+  </div>
+</section>
+
+<!-- APP SHELL -->
+<div class="app-shell">
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">OS</div>
+      <span>Gestão de Ordens de Serviço</span>
+    </div>
+
+    <div class="user-pill">
+      <div class="avatar">G</div>
+      <span>Gestor da Empresa</span>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="nav-title">Navegação</div>
+      <a href="#dashboard">▦ Painel geral</a>
+      <a href="#ordens">☰ Ordens de serviço</a>
+      <a href="#nova-ordem">＋ Nova ordem</a>
+      <div class="nav-title space">Sessão</div>
+      <a href="#">↩ Sair</a>
+    </aside>
+
+    <main class="main">
+
+      <!-- DASHBOARD -->
+      <section id="dashboard" class="screen">
+        <div class="page-head">
+          <div>
+            <h1>Painel geral</h1>
+            <p>Acompanhe rapidamente a situação atual das ordens de serviço.</p>
+          </div>
+          <a class="btn" href="#nova-ordem">Nova ordem</a>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <span>Total de ordens</span>
+            <strong>19</strong>
+            <small>Registros cadastrados</small>
+          </article>
+          <article class="card">
+            <span>Pendentes</span>
+            <strong>4</strong>
+            <small>Aguardando início</small>
+          </article>
+          <article class="card">
+            <span>Em andamento</span>
+            <strong>3</strong>
+            <small>Atividades em execução</small>
+          </article>
+          <article class="card">
+            <span>Concluídas</span>
+            <strong>12</strong>
+            <small>Finalizadas</small>
+          </article>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <h3>Ordens recentes</h3>
+            <a class="btn ghost" href="#ordens">Ver todas</a>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Descrição</th>
+                  <th>Responsável</th>
+                  <th>Prazo</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="#detalhes">#019</a></td>
+                  <td>Produção de lote hospitalar</td>
+                  <td>Marcos</td>
+                  <td>10/09/2026</td>
+                  <td><span class="badge progress">Em andamento</span></td>
+                </tr>
+                <tr>
+                  <td><a href="#detalhes">#018</a></td>
+                  <td>Produção de artigos para idosos</td>
+                  <td>Ana</td>
+                  <td>08/09/2026</td>
+                  <td><span class="badge pending">Pendente</span></td>
+                </tr>
+                <tr>
+                  <td><a href="#detalhes">#017</a></td>
+                  <td>Reposição de lote</td>
+                  <td>Carlos</td>
+                  <td>05/09/2026</td>
+                  <td><span class="badge done">Concluída</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ORDENS -->
+      <section id="ordens" class="screen">
+        <div class="page-head">
+          <div>
+            <h1>Ordens de serviço</h1>
+            <p>Consulte as demandas cadastradas.</p>
+          </div>
+          <a class="btn" href="#nova-ordem">Nova ordem</a>
+        </div>
+
+        <div class="panel">
+          <div class="filters">
+            <input placeholder="Pesquisar por ID, descrição ou responsável">
+            <select>
+              <option>Todos os status</option>
+              <option>Pendente</option>
+              <option>Em andamento</option>
+              <option>Concluída</option>
+            </select>
+            <select>
+              <option>Todas as prioridades</option>
+              <option>Alta</option>
+              <option>Média</option>
+              <option>Baixa</option>
+            </select>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Descrição</th>
+                  <th>Responsável</th>
+                  <th>Prioridade</th>
+                  <th>Prazo</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="#detalhes">#019</a></td>
+                  <td>Produção de lote hospitalar</td>
+                  <td>Marcos</td>
+                  <td><span class="badge high">Alta</span></td>
+                  <td>10/09/2026</td>
+                  <td><span class="badge progress">Em andamento</span></td>
+                </tr>
+                <tr>
+                  <td><a href="#detalhes">#018</a></td>
+                  <td>Produção de artigos para idosos</td>
+                  <td>Ana</td>
+                  <td><span class="badge medium">Média</span></td>
+                  <td>08/09/2026</td>
+                  <td><span class="badge pending">Pendente</span></td>
+                </tr>
+                <tr>
+                  <td><a href="#detalhes">#017</a></td>
+                  <td>Reposição de lote</td>
+                  <td>Carlos</td>
+                  <td><span class="badge low">Baixa</span></td>
+                  <td>05/09/2026</td>
+                  <td><span class="badge done">Concluída</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- NOVA ORDEM -->
+      <section id="nova-ordem" class="screen">
+        <div class="page-head">
+          <div>
+            <h1>Nova ordem de serviço</h1>
+            <p>Registre uma nova demanda de produção.</p>
+          </div>
+        </div>
+
+        <form class="form-card" action="#ordens">
+          <div class="form-grid">
+            <div class="field full">
+              <label>Descrição</label>
+              <textarea rows="4" placeholder="Ex.: Produção de lote hospitalar" required></textarea>
+            </div>
+
+            <div class="field">
+              <label>Responsável</label>
+              <input placeholder="Nome do responsável" required>
+            </div>
+
+            <div class="field">
+              <label>Prazo</label>
+              <input type="date" required>
+            </div>
+
+            <div class="field">
+              <label>Prioridade</label>
+              <select>
+                <option>Baixa</option>
+                <option selected>Média</option>
+                <option>Alta</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>Status</label>
+              <select>
+                <option selected>Pendente</option>
+                <option>Em andamento</option>
+                <option>Concluída</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="actions">
+            <a class="btn secondary" href="#ordens">Cancelar</a>
+            <button class="btn" type="submit">Salvar ordem</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- DETALHES -->
+      <section id="detalhes" class="screen">
+        <div class="page-head">
+          <div>
+            <h1>Ordem de serviço #019</h1>
+            <p>Detalhes, status e histórico da ordem selecionada.</p>
+          </div>
+          <a class="btn" href="#editar">Editar ordem</a>
+        </div>
+
+        <div class="details-grid">
+          <div class="panel">
+            <div class="panel-head"><h3>Informações da ordem</h3></div>
+            <div class="meta-grid">
+              <div class="meta-box"><small>Descrição</small><strong>Produção de lote hospitalar</strong></div>
+              <div class="meta-box"><small>Responsável</small><strong>Marcos</strong></div>
+              <div class="meta-box"><small>Prioridade</small><strong><span class="badge high">Alta</span></strong></div>
+              <div class="meta-box"><small>Prazo</small><strong>10/09/2026</strong></div>
+              <div class="meta-box"><small>Status</small><strong><span class="badge progress">Em andamento</span></strong></div>
+              <div class="meta-box"><small>Data de criação</small><strong>05/09/2026 09:10</strong></div>
+            </div>
+
+            <div class="status-update">
+              <label>Atualizar status</label>
+              <div>
+                <select>
+                  <option>Pendente</option>
+                  <option selected>Em andamento</option>
+                  <option>Concluída</option>
+                </select>
+                <a class="btn" href="#detalhes">Atualizar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head"><h3>Histórico</h3></div>
+
+            <details open>
+              <summary>Status alterado para “Em andamento”</summary>
+              <p>06/09/2026 14:20</p>
+            </details>
+
+            <details>
+              <summary>Ordem cadastrada</summary>
+              <p>05/09/2026 09:10</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- EDITAR -->
+      <section id="editar" class="screen">
+        <div class="page-head">
+          <div>
+            <h1>Editar ordem #019</h1>
+            <p>Atualize as informações necessárias.</p>
+          </div>
+        </div>
+
+        <form class="form-card" action="#detalhes">
+          <div class="form-grid">
+            <div class="field full">
+              <label>Descrição</label>
+              <textarea rows="4">Produção de lote hospitalar</textarea>
+            </div>
+
+            <div class="field">
+              <label>Responsável</label>
+              <input value="Marcos">
+            </div>
+
+            <div class="field">
+              <label>Prazo</label>
+              <input type="date" value="2026-09-10">
+            </div>
+
+            <div class="field">
+              <label>Prioridade</label>
+              <select>
+                <option>Baixa</option>
+                <option>Média</option>
+                <option selected>Alta</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>Status</label>
+              <select>
+                <option>Pendente</option>
+                <option selected>Em andamento</option>
+                <option>Concluída</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="actions">
+            <a class="btn secondary" href="#detalhes">Cancelar</a>
+            <a class="btn" href="#detalhes">Salvar alterações</a>
+          </div>
+        </form>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+</body>
+</html>
